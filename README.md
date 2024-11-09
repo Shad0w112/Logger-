@@ -17,8 +17,8 @@ Logger++ is a multithreaded logging extension for Burp Suite. Here is a list of 
 - [LFI](#lfi)
 - [Web_Cache](#web_cache)
 - [OpenRedirect_Params](#openredirect_params)
-- [rce_Params](#lfi)
-- [FDT&SSRF_Params](#fdt&ssrf_Params)
+- [RCE_Params](#rce_params)
+- [FDT&SSRF_Params](#fdtssrf_Params)
 
 ---
 
