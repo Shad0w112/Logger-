@@ -23,7 +23,7 @@ Logger++ is a multithreaded logging extension for Burp Suite. Here is a list of 
 ---
 
 ### **PostMessage**
-*Check for open communication between windows without restrictions on origin *
+Check for open communication between windows without restrictions on origin
 
 **Filter:**  
 `Response.Body CONTAINS "postMessage" OR Response.Body CONTAINS "addEventListener"`
