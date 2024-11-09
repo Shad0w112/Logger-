@@ -31,7 +31,7 @@ Logger++ is a multithreaded logging extension for Burp Suite. Here is a list of 
 ---
 
 ### **ClientSide_RaceCondition**
-*Identify risky usage of `setTimeout` and `setInterval` that could lead to race conditions (Check2Act)*
+*Identify risky usage of `setTimeout` and `setInterval` that could lead to race conditions. (Check2Act)*
 
 **Filter:**  
 `Response.Body CONTAINS "setTimeout" OR Response.Body CONTAINS "setInterval"`
@@ -39,7 +39,7 @@ Logger++ is a multithreaded logging extension for Burp Suite. Here is a list of 
 ---
 
 ### **API_SOAP**
-*Detect SOAP API usage*
+*Detect SOAP API usage.*
 
 **Filter:**  
 `Request.Body CONTAINS "wsdl" OR Request.URL CONTAINS "wsdl OR Response.Body CONTAINS "wsdl" OR Response.Headers CONTAINS "wsdl"`
@@ -47,7 +47,7 @@ Logger++ is a multithreaded logging extension for Burp Suite. Here is a list of 
 ---
 
 ### **All_Access_Control**
-*Check for potential All misconfigurations about Access-Control*
+*Check for potential All misconfigurations about Access-Control.*
 
 **Filter:**  
 `Response.Headers CONTAINS "Access-Control"`
@@ -55,7 +55,7 @@ Logger++ is a multithreaded logging extension for Burp Suite. Here is a list of 
 ---
 
 ### **OpenRedirect**
-*Check for open redirect vulnerabilities*
+*Check for open redirect vulnerabilities.*
 
 **Filter:**  
 `(Request.Query MATCHES ".*(http%3A%2F%2F|https%3A%2F%2F)?(www.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}.*" OR Request.Body MATCHES ".*(http%3A%2F%2F|https%3A%2F%2F)?(www.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}.*") AND Response.Status IN [301, 302]`
@@ -63,7 +63,7 @@ Logger++ is a multithreaded logging extension for Burp Suite. Here is a list of 
 ---
 
 ### **SSRF**
-*Detect potential SSRF vulnerabilities*
+*Detect potential SSRF vulnerabilities.*
 
 **Filter:**  
 `(Request.Query MATCHES ".*(http%3A%2F%2F|https%3A%2F%2F)?(www.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}.*" OR Request.Body MATCHES ".*(http%3A%2F%2F|https%3A%2F%2F)?(www.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}.*")`
@@ -71,7 +71,7 @@ Logger++ is a multithreaded logging extension for Burp Suite. Here is a list of 
 ---
 
 ### **HTTP_Headers_Manipulation**
-*Before running this check, use various tools to add headers to the request(https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/special-http-headers#headers-to-change-location), and then inspect the response for suspicious headers or content. this headers indicating potential misconfigurations.*
+*Before using this check, use various tools to add headers to the request(https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/special-http-headers#headers-to-change-location), and then inspect the response for suspicious headers or content. this headers indicating potential misconfigurations.*
 
 **Filter:**  
 `Response.Body CONTAINS "h4ck3er.com" OR Response.Body CONTAINS "127.0.0.2" OR Response.Body CONTAINS "127.0.0.3" OR Response.Body CONTAINS "127.0.0.4" OR Response.Body CONTAINS "127.0.0.5" OR Response.Body CONTAINS "127.0.0.6" OR Response.Body CONTAINS "127.0.0.7" OR Response.Headers CONTAINS "h4ck3er.com" OR Response.Headers CONTAINS "127.0.0.2" OR Response.Headers CONTAINS "127.0.0.3" OR Response.Headers CONTAINS "127.0.0.4" OR Response.Headers CONTAINS "127.0.0.5" OR Response.Headers CONTAINS "127.0.0.6" OR Response.Headers CONTAINS "127.0.0.7" OR Response.Headers CONTAINS "localhost"`
@@ -79,7 +79,7 @@ Logger++ is a multithreaded logging extension for Burp Suite. Here is a list of 
 ---
 
 ### **Telerik_CVE**
-*Detect potential vulnerabilities related to Telerik components*
+*Detect potential vulnerabilities related to Telerik components.*
 
 **Filter:**  
 `Request.URL CONTAINS "WebResource.axd" OR Request.URL CONTAINS "Telerik.Web.UI" OR Request.URL CONTAINS "ScriptResource.axd"`
@@ -111,7 +111,7 @@ Logger++ is a multithreaded logging extension for Burp Suite. Here is a list of 
 ---
 
 ### **LFI**
-*Detect Local File Inclusion vulnerabilities*
+*Detect Local File Inclusion vulnerabilities.*
 
 **Filter:**  
 `Request.Query MATCHES ".*\.[a-z]{1,5}.*" OR Request.Body MATCHES ".*\.[a-z]{1,5}.*"`
