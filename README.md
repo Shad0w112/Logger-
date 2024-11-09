@@ -19,6 +19,7 @@ Logger++ is a multithreaded logging extension for Burp Suite. Here is a list of 
 - [CORS](#cors)
 - [LFI](#lfi)
 - [Web_Cache](#web_cache)
+- [IP_Disclosure](#ip_disclosure)
 - [OpenRedirect_Params](#openredirect_params)
 - [RCE_Params](#rce_params)
 - [FDT&SSRF_Params](#fdtssrf_Params)
@@ -126,6 +127,14 @@ Logger++ is a multithreaded logging extension for Burp Suite. Here is a list of 
 
 **Filter:**  
 `Response.Headers CONTAINS "X-Cache"`
+
+---
+
+### **IP_Disclosure**
+*Detect IP Addresses.*
+
+**Filter:**  
+`Response.Body == /\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/ OR Response.Headers == /\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/`
 
 ---
 
