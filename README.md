@@ -1,6 +1,7 @@
 # Advanced Logger++ Filters 
 
 Logger++ is a multithreaded logging extension for Burp Suite. Here is a list of custom filters to check for potential vulnerabilities.
+![123](image.png)
 
 ## Table of Contents
 - [PostMessage](#postmessage)
