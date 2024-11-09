@@ -11,7 +11,7 @@ Logger++ is a multithreaded logging extension for Burp Suite. Here is a list of 
 - [SSRF](#ssrf)
 - [HTTP_Headers_Manipulation](#http_headers_manipulation)
 - [Telerik_CVE](#telerik_cve)
-- [CSTI&SSTI](#csti&ssti)
+- [CSTI&SSTI](#cstissti)
 - [JSONP](#jsonp)
 - [CORS](#cors)
 - [LFI](#lfi)
@@ -87,7 +87,7 @@ Logger++ is a multithreaded logging extension for Burp Suite. Here is a list of 
 ---
 
 ### **CSTI&SSTI**
-*First, use tools like AutoRepeater(https://github.com/nccgroup/AutoRepeater) to input for example {{110*110}} in the fields, then check the response for the number 12100, which indicates a potential client-side or server-side template injection vulnerability.*
+*First, use tools like AutoRepeater(https://github.com/nccgroup/AutoRepeater) to input for example `{{110*110}}` or ... in the fields, then check the response for the number 12100, which indicates a potential client-side or server-side template injection vulnerability.*
 
 **Filter:**  
 `Response.Body CONTAINS "12100"`
