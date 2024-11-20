@@ -123,10 +123,10 @@ Logger++ is a multithreaded logging extension for Burp Suite. Here is a list of 
 ---
 
 ### **Web_Cache**
-*Detect cache pages to test all cache vulnerabilities.*
+*Detect cache requests to test all cache vulnerabilities.*
 
 **Filter:**  
-`Response.Headers CONTAINS "X-Cache"`
+`Response.Headers CONTAINS "X-Cache" OR Response.Headers CONTAINS "X-Cache-Status" OR Response.Headers CONTAINS "CF-Cache-Status" OR Response.Headers CONTAINS "X-Proxy-Cache" OR Response.Headers CONTAINS "X-Cache-Enabled" OR Response.Headers CONTAINS "X-WP-CF-Super-Cache" OR Response.Headers CONTAINS "X-Drupal-Cache" OR Response.Headers CONTAINS "X-Joomla-Cache" OR Response.Headers CONTAINS "X-Drupal-Dynamic-Cache" OR Response.Headers CONTAINS "Cache-Status" OR Response.Headers CONTAINS "Cache-Control: public"`
 
 ---
 
